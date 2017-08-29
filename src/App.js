@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React from 'react'
+import styled from 'styled-components'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const AppComp = styled.div`color: #333;`
+
+export const App = () => {
+	return (
+		<AppComp className="App">
+			<div className="App-header">
+				<h2>Welcome to React</h2>
+			</div>
+			<p className="App-intro">
+				To get started, edit <code>src/App.js</code> and save to reload.
+			</p>
+		</AppComp>
+	)
 }
-
-export default App;
