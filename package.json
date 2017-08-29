@@ -1,35 +1,39 @@
 {
-  "name": "search-dashboard",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "history": "^4.7.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.6",
-    "react-scripts": "1.0.12",
-    "redux": "^3.7.2",
-    "redux-first-router": "^1.9.19",
-    "styled-components": "^2.1.2"
-  },
-  "scripts": {
-    "precommit": "lint-staged",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "format": "prettier --write src/**/*.js"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": ["lint", "prettier --write", "git add"]
-  },
-  "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-react": "^7.3.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.4",
-    "prettier": "^1.6.0"
-  }
+	"name": "search-dashboard",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"history": "^4.7.2",
+		"react": "^15.6.1",
+		"react-dom": "^15.6.1",
+		"react-redux": "^5.0.6",
+		"react-scripts": "1.0.12",
+		"redux": "^3.7.2",
+		"redux-first-router": "^1.9.19",
+		"serve": "^6.0.6",
+		"styled-components": "^2.1.2"
+	},
+	"scripts": {
+		"precommit": "lint-staged",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject",
+		"lint": "eslint .",
+		"format": "prettier --write src/**/*.js",
+		"up": "serve -o build",
+		"preserve": "yarn run build",
+		"serve": "yarn run up"
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx}": ["lint", "prettier --write", "git add"]
+	},
+	"devDependencies": {
+		"eslint": "^4.5.0",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-react": "^7.3.0",
+		"husky": "^0.14.3",
+		"lint-staged": "^4.0.4",
+		"prettier": "^1.6.0"
+	}
 }
