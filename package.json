@@ -4,7 +4,6 @@
 	"private": true,
 	"dependencies": {
 		"babel-polyfill": "^6.26.0",
-		"flow-bin": "^0.53.1",
 		"gh-pages": "^1.0.0",
 		"history": "^4.7.2",
 		"react": "^15.6.1",
@@ -32,8 +31,7 @@
 		"format": "prettier --write src/**/*.js",
 		"up": "serve -o build",
 		"preserve": "yarn run build",
-		"serve": "yarn run up",
-		"flow": "flow"
+		"serve": "yarn run up"
 	},
 	"lint-staged": {
 		"src/**/*.js": ["lint", "prettier --write", "git add", "test:staged"]

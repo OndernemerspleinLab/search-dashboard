@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react'
 import styled from 'styled-components'
 import { hemelblauw, violet, mosgroen } from '../colors'
@@ -39,12 +37,7 @@ const Score = withChildrenAsFormattedNumber(styled.span`
 	line-height: 1;
 `)
 
-type Props = {
-	searchTerm?: string,
-	score?: number,
-}
-
-export const SearchTerm = ({ searchTerm, score }: Props) => (
+export const SearchTerm = ({ searchTerm, score }) => (
 	<SearchTermWrapper>
 		<Media>
 			<Term className="underliner">{searchTerm}</Term>

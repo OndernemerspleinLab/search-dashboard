@@ -1,11 +1,10 @@
-// @flow
+import { negate } from './functional'
 
-export const existing = (maybe: mixed): %checks => maybe != null
+export const existing = maybe => maybe != null
 
-export const unexisting = (maybe: mixed): %checks => !existing(maybe)
+export const unexisting = negate(existing)
 
-export const isString = (maybeString: mixed): %checks =>
-	typeof maybeString === 'string'
+export const isString = maybeString => typeof maybeString === 'string'
 
-export const isNumber = (maybeNumber: mixed): %checks =>
+export const isNumber = maybeNumber =>
 	typeof maybeNumber === 'number' && !isNaN(maybeNumber)

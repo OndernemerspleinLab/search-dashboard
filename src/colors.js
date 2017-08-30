@@ -1,5 +1,3 @@
-// @flow
-
 export const hemelblauw = {
 	default: '#0077c0',
 	darkest: '#033054',

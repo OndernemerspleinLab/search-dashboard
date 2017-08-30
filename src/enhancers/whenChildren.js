@@ -1,4 +1,3 @@
-// @flow
 import { branch, renderNothing } from 'recompose'
 import { unexisting } from '../utils/predicates'
 

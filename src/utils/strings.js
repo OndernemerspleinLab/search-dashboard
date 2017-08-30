@@ -1,4 +1,4 @@
-export const formatNumber = decimalCount => (number: number): string => {
+export const formatNumber = decimalCount => number => {
 	const [integers = '', decimals = ''] = number.toString().split('.')
 
 	const formattedDecimals = decimals
