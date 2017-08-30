@@ -36,7 +36,7 @@
 		"flow": "flow"
 	},
 	"lint-staged": {
-		"/src/**/*.{js,jsx}": ["lint", "prettier --write", "git add", "test:staged"]
+		"src/**/*.js": ["lint", "prettier --write", "git add", "test:staged"]
 	},
 	"devDependencies": {
 		"cross-env": "^5.0.5",
