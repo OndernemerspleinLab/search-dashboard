@@ -3,15 +3,22 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"babel-polyfill": "^6.26.0",
+		"flow-bin": "^0.53.1",
+		"gh-pages": "^1.0.0",
 		"history": "^4.7.2",
 		"react": "^15.6.1",
 		"react-dom": "^15.6.1",
 		"react-redux": "^5.0.6",
 		"react-scripts": "1.0.12",
+		"recompose": "^0.25.0",
 		"redux": "^3.7.2",
 		"redux-first-router": "^1.9.19",
+		"redux-thunk": "^2.2.0",
 		"serve": "^6.0.6",
-		"styled-components": "^2.1.2"
+		"styled-components": "^2.1.2",
+		"url-polyfill": "^1.0.7",
+		"whatwg-fetch": "^2.0.3"
 	},
 	"scripts": {
 		"precommit": "lint-staged",
@@ -24,7 +31,8 @@
 		"format": "prettier --write src/**/*.js",
 		"up": "serve -o build",
 		"preserve": "yarn run build",
-		"serve": "yarn run up"
+		"serve": "yarn run up",
+		"flow": "flow"
 	},
 	"lint-staged": {
 		"src/**/*.{js,jsx}": [

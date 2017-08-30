@@ -1,3 +1,10 @@
+// @flow
+
+// Polyfills
+import 'babel-polyfill'
+import 'whatwg-fetch'
+import 'url-polyfill'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './App'

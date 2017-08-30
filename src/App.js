@@ -1,17 +1,34 @@
+// @flow
+
 import React from 'react'
-import styled from 'styled-components'
+import { injectGlobal } from 'styled-components'
+import { startStore } from './store/store'
+import { Provider } from 'react-redux'
+import { FullLayout, TopArea, MainLayout, SideArea, MainArea } from './Layout'
+import { hemelblauw } from './colors'
 
-const Main = styled.main`color: #333;`
+injectGlobal`
+	:root {
+		line-height: 1.6;
+		font-family: sans-serif;
+		background-color: ${hemelblauw.lightest}
+	}
 
-export const App = () => {
-	return (
-		<Main className="App">
-			<div className="App-header">
-				<h2>Welcome to React</h2>
-			</div>
-			<p className="App-intro">
-				To get started, edit <code>src/App.js</code> and save to reload.
-			</p>
-		</Main>
-	)
-}
+	* {
+		box-sizing: border-box;
+	}
+`
+
+const store = startStore()
+
+export const App = () => (
+	<Provider store={store}>
+		<FullLayout>
+			<TopArea>top</TopArea>
+			<MainLayout>
+				<SideArea>side</SideArea>
+				<MainArea>main</MainArea>
+			</MainLayout>
+		</FullLayout>
+	</Provider>
+)
