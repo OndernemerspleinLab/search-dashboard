@@ -9,7 +9,7 @@ export opaque type Url: string = string
 
 export type SearchTerms = {
 	[SearchTermId]: {
-		term: string,
+		searchTerm: string,
 		weight: number,
 		expectedResults: ExpectedResultId[],
 	},
@@ -18,7 +18,7 @@ export type SearchTerms = {
 export type SearchQueries = {
 	[SearchQueryId]: {
 		name: string,
-		query: string,
+		searchQuery: string,
 	},
 }
 

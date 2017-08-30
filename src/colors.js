@@ -31,5 +31,12 @@ export const grijs = {
 	lightest: '#f6f6f6',
 }
 
+export const mosgroen = {
+	darker: '#686b00',
+	default: '#727800',
+	light: '#d6d7b2',
+	lightest: '#eeeed7',
+}
+
 export const zwart = '#000000'
 export const wit = '#ffffff'

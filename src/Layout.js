@@ -44,9 +44,16 @@ export const SideArea = styled.div`
 	${overflowY};
 	flex: none;
 	width: 24rem;
-	background-color: ${hemelblauw.darkest};
 	color: ${hemelblauw.lighter};
-	margin-right: 3px;
+	display: flex;
+	flex-direction: column;
+
+	&::after {
+		content: '';
+		display: block;
+		flex: auto;
+		background-color: ${hemelblauw.darkest};
+	}
 `
 
 export const MainArea = styled.div`

@@ -25,7 +25,8 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
-		"test:staged": "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
+		"test:staged":
+			"cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
 		"eject": "react-scripts eject",
 		"lint": "eslint .",
 		"format": "prettier --write src/**/*.js",
@@ -35,12 +36,7 @@
 		"flow": "flow"
 	},
 	"lint-staged": {
-		"src/**/*.{js,jsx}": [
-			"lint",
-			"prettier --write",
-			"git add",
-			"test:staged"
-		]
+		"/src/**/*.{js,jsx}": ["lint", "prettier --write", "git add", "test:staged"]
 	},
 	"devDependencies": {
 		"cross-env": "^5.0.5",
