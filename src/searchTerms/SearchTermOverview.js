@@ -2,18 +2,13 @@ import React from 'react'
 import { SearchTermConnected } from './SearchTerm'
 import { AddButtonBlock } from '../buttons/AddButton'
 import styled from 'styled-components'
-import { hemelblauw } from '../colors'
 import { connect } from 'react-redux'
 import { searchTermListConnector } from '../connectors/searchTermConnectors'
+import { BarBackground, titleStyle } from '../styles/bar'
 
-const Background = styled.div`background: ${hemelblauw.darkest};`
 const Title = styled.h2`
-	color: inherit;
+	${titleStyle};
 	margin: 0 0 1px 0;
-	padding: 0.9rem 1rem;
-	text-align: center;
-	font-size: 1.2rem;
-	line-height: 1.2;
 `
 const SearchTermList = ({ searchTermList }) => {
 	return (
@@ -30,13 +25,13 @@ const SearchTermListConnected = connect(searchTermListConnector)(SearchTermList)
 export const SearchTermOverview = () => {
 	return (
 		<div>
-			<Background>
+			<BarBackground>
 				<Title>Zoektermen</Title>
-			</Background>
+			</BarBackground>
 			<SearchTermListConnected />
-			<Background>
+			<BarBackground>
 				<AddButtonBlock>Zoekterm toevoegen</AddButtonBlock>
-			</Background>
+			</BarBackground>
 		</div>
 	)
 }

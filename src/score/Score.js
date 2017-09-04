@@ -14,7 +14,7 @@ export const Score = withChildrenAsFormattedNumber(styled.span`
 	border: 1px solid
 		${({ number }) => (number < limit ? violet.default : mosgroen.default)};
 	text-align: center;
-	min-wdith: 2em;
+	min-width: 2em;
 	${mediaFigureStyle};
 	margin: 0.3rem;
 	font-weight: bold;

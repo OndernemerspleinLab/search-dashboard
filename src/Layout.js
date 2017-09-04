@@ -33,10 +33,18 @@ export const MainLayout = styled.div`
 export const TopArea = styled.div`
 	${overflowX};
 	flex: none;
+	display: flex;
+	flex-direction: row;
 	height: 4rem;
-	background-color: ${hemelblauw.darkest};
 	color: ${hemelblauw.lighter};
 	margin-bottom: 3px;
+
+	&::after {
+		content: '';
+		display: block;
+		flex: auto;
+		background-color: ${hemelblauw.darkest};
+	}
 `
 
 export const SideArea = styled.div`

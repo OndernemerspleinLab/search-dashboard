@@ -6,6 +6,7 @@ import { FullLayout, TopArea, MainLayout, SideArea, MainArea } from './Layout'
 import { hemelblauw } from './colors'
 import { SearchTermOverview } from './searchTerms/SearchTermOverview'
 import { initialState } from './store/initialState'
+import { BenchmarkOverview } from './benchmarks/BenchmarkOverview'
 
 injectGlobal`
 	:root {
@@ -33,7 +34,9 @@ const store = startStore(initialState)
 export const App = () => (
 	<Provider store={store}>
 		<FullLayout>
-			<TopArea>top</TopArea>
+			<TopArea>
+				<BenchmarkOverview />
+			</TopArea>
 			<MainLayout>
 				<SideArea>
 					<SearchTermOverview />

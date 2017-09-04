@@ -14,6 +14,12 @@ export const initialState = {
 			weight: 2,
 			expectedResults: [],
 		},
+		zzp: {
+			id: 'zzp',
+			searchTerm: 'zzp',
+			weight: 1.4,
+			expectedResults: [],
+		},
 	},
 	searchTermScores: {
 		defaultQuery: {
@@ -25,6 +31,11 @@ export const initialState = {
 			rechtsvorm: {
 				id: ['defaultQuery', 'rechtsvorm'],
 				score: 7,
+				active: true,
+			},
+			zzp: {
+				id: ['defaultQuery', 'zzp'],
+				score: 6.4,
 			},
 		},
 	},

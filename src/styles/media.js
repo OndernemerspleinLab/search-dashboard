@@ -11,3 +11,6 @@ export const Media = styled.span`${mediaStyle};`
 
 export const mediaFigureStyle = css`flex: none;`
 export const mediaTextStyle = css`flex: auto;`
+
+export const MediaFigure = styled.span`${mediaFigureStyle};`
+export const MediaText = styled.span`${mediaTextStyle};`
