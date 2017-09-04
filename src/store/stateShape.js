@@ -17,6 +17,7 @@ export type SearchTerms = {
 
 export type SearchQueries = {
 	[SearchQueryId]: {
+		searchUrl: string,
 		name: string,
 		searchQuery: string,
 	},
@@ -36,6 +37,7 @@ export type ActualResults = {
 }
 
 export type Score = {
+	id: [SearchQueryId, SearchTermId],
 	score: number,
 }
 
@@ -51,7 +53,9 @@ export type SearchQueryScores = {
 	},
 }
 
-export type UiState = {}
+export type UiState = {
+	activeQueryId: SearchQueryId,
+}
 
 export type State = {
 	searchTerms: SearchTerms,
@@ -64,5 +68,5 @@ export type State = {
 	actualResultList: ActualResultId[],
 	searchTermScores: SearchTermScores,
 	searchQueryScores: SearchQueryScores,
-	ui: UiState,
+	uiState: UiState,
 }

@@ -4,8 +4,12 @@ import { reducers } from '../reducers/reducers'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-export const startStore = () => {
-	const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
+export const startStore = initialState => {
+	const store = createStore(
+		reducers,
+		initialState,
+		composeEnhancers(applyMiddleware(thunk)),
+	)
 
 	return store
 }

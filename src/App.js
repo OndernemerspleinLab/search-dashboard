@@ -4,7 +4,8 @@ import { startStore } from './store/store'
 import { Provider } from 'react-redux'
 import { FullLayout, TopArea, MainLayout, SideArea, MainArea } from './Layout'
 import { hemelblauw } from './colors'
-import { SearchTerm } from './searchTerms/SearchTerm'
+import { SearchTermOverview } from './searchTerms/SearchTermOverview'
+import { initialState } from './store/initialState'
 
 injectGlobal`
 	:root {
@@ -17,13 +18,17 @@ injectGlobal`
 		box-sizing: border-box;
 	}
 
+	button {
+		cursor: pointer;
+	}
+
 	button:focus {
 		box-shadow: inset 0 0 0 0.4rem ${hemelblauw.darker};
 		outline: none;
 	}
 `
 
-const store = startStore()
+const store = startStore(initialState)
 
 export const App = () => (
 	<Provider store={store}>
@@ -31,8 +36,7 @@ export const App = () => (
 			<TopArea>top</TopArea>
 			<MainLayout>
 				<SideArea>
-					<SearchTerm searchTerm={'Ondernemersplan'} score={3} />
-					<SearchTerm searchTerm={'Rechtsvorm'} score={7} />
+					<SearchTermOverview />
 				</SideArea>
 				<MainArea>main</MainArea>
 			</MainLayout>

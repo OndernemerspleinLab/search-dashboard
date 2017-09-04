@@ -8,3 +8,6 @@ export const isString = maybeString => typeof maybeString === 'string'
 
 export const isNumber = maybeNumber =>
 	typeof maybeNumber === 'number' && !isNaN(maybeNumber)
+
+export const isObject = maybeObject =>
+	existing(maybeObject) && typeof maybeObject === 'object'
