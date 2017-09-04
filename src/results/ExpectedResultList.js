@@ -2,8 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { titleStyle } from '../styles/bar'
 import { Score } from '../score/Score'
-import { Media } from '../styles/media'
+import { Media, MediaText, MediaFigure } from '../styles/media'
 import { ResultLink, ResultTitle } from './ResultLink'
+import { Pencil } from '../svg/Pencil'
+import { hemelblauw } from '../colors'
+import { nest } from 'recompose'
+import { cleanButtonStyle } from '../styles/cleanButton'
 
 const ExpectedResultListWrapper = styled.div`
 	flex: auto;
@@ -16,10 +20,28 @@ const ExpectedResultListTitle = styled.h2`
 	padding-left: 0;
 `
 
+const EditButton = nest(
+	styled.button`
+		${cleanButtonStyle};
+		padding: 0.2rem 0.6rem;
+		margin: -0.2rem;
+	`,
+	styled(Pencil)`
+		fill: ${hemelblauw.grijscontrast};
+	`,
+)
+
 export const ExpectedResultList = () => {
 	return (
 		<ExpectedResultListWrapper>
-			<ExpectedResultListTitle>Gewenste resultaten</ExpectedResultListTitle>
+			<ExpectedResultListTitle>
+				<Media>
+					<MediaFigure>Gewenste resultaten</MediaFigure>
+					<MediaFigure>
+						<EditButton />
+					</MediaFigure>
+				</Media>
+			</ExpectedResultListTitle>
 
 			<ResultLink href="https://www.ondernemersplein.nl/ondernemen/bedrijf-organiseren/rechtsvormen/info-en-advies/alle-rechtsvormen-op-een-rij/">
 				<Media>
