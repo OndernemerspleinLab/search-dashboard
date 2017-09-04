@@ -7,6 +7,7 @@ import { hemelblauw } from './colors'
 import { SearchTermOverview } from './searchTerms/SearchTermOverview'
 import { initialState } from './store/initialState'
 import { BenchmarkOverview } from './benchmarks/BenchmarkOverview'
+import { Results } from './results/Results'
 
 injectGlobal`
 	:root {
@@ -41,7 +42,9 @@ export const App = () => (
 				<SideArea>
 					<SearchTermOverview />
 				</SideArea>
-				<MainArea>main</MainArea>
+				<MainArea>
+					<Results />
+				</MainArea>
 			</MainLayout>
 		</FullLayout>
 	</Provider>
