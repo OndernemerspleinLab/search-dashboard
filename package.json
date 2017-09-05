@@ -2,6 +2,7 @@
 	"name": "search-dashboard",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": ".",
 	"dependencies": {
 		"babel-polyfill": "^6.26.0",
 		"gh-pages": "^1.0.0",
@@ -27,7 +28,7 @@
 		"test:staged":
 			"cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
 		"eject": "react-scripts eject",
-		"lint": "eslint .",
+		"lint": "eslint --ignore-path .gitignore .",
 		"format": "prettier --write src/**/*.js",
 		"up": "serve -o build",
 		"preserve": "yarn run build",
