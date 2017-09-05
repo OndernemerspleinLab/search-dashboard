@@ -45,8 +45,8 @@ const MockupWarning = styled.p.attrs({ children: 'Mockup' })`
 	transform: rotate(-10deg);
 	border-top: 2px solid;
 	border-bottom: 2px solid;
-	padding-bottom: 0.6rem;
 	line-height: 1;
+	padding-bottom: 0.6rem;
 `
 
 export const App = () => (

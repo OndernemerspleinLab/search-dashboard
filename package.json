@@ -29,13 +29,14 @@
 			"cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
 		"eject": "react-scripts eject",
 		"lint": "eslint --ignore-path .gitignore .",
+		"lint:staged": "eslint --ignore-path .gitignore",
 		"format": "prettier --write src/**/*.js",
 		"up": "serve -o build",
 		"preserve": "yarn run build",
 		"serve": "yarn run up"
 	},
 	"lint-staged": {
-		"src/**/*.js": ["lint", "prettier --write", "git add", "test:staged"]
+		"src/**/*.js": ["lint:staged", "prettier --write", "git add", "test:staged"]
 	},
 	"devDependencies": {
 		"cross-env": "^5.0.5",
