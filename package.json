@@ -33,7 +33,9 @@
 		"format": "prettier --write src/**/*.js",
 		"up": "serve -o build",
 		"preserve": "yarn run build",
-		"serve": "yarn run up"
+		"serve": "yarn run up",
+		"predeploy": "yarn run build",
+		"deploy": "gh-pages -d build"
 	},
 	"lint-staged": {
 		"src/**/*.js": ["lint:staged", "prettier --write", "git add", "test:staged"]
